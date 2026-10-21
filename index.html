@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17251f">
+  <title>ThreadCraft — Wear your imagination</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ThreadCraft home"><span class="brand-mark">T</span><span>threadcraft<span class="brand-dot">.</span></span></a>
+    <nav class="top-nav"><a href="#studio">Design studio</a><a href="#how-it-works">How it works</a></nav>
+    <button class="button button-dark top-login" id="open-login">Sign in <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR IDEA. YOUR FABRIC. YOUR FIT.</div>
+        <h1>Wear your<br><em>imagination.</em></h1>
+        <p class="hero-text">Create clothing that feels like you. Choose every detail, upload your inspiration, and send your one-of-a-kind design to our makers.</p>
+        <div class="hero-actions"><a class="button button-lime" href="#studio">Start designing <span>↗</span></a><a class="text-link" href="#how-it-works">See how it works <span>↓</span></a></div>
+        <div class="hero-note"><div class="avatar-stack"><span>A</span><span>M</span><span>J</span></div><span><strong>Made by you.</strong> Crafted by people.</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85" alt="Fashion models wearing contemporary clothing"></div>
+        <div class="floating-tag tag-top"><span class="tag-dot"></span> MADE TO MEASURE</div>
+        <div class="floating-card"><span class="mini-label">THE CREATIVE PROCESS</span><strong>From sketch<br>to something real.</strong><div class="progress-track"><span></span></div><div class="progress-caption"><span>YOUR IDEA</span><span>YOUR PIECE</span></div></div>
+        <div class="art-sticker">ONE<br>OF<br><em>ONE</em></div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><div><strong>01</strong><span>Make it yours</span></div><div><strong>02</strong><span>Choose better materials</span></div><div><strong>03</strong><span>Send it to our makers</span></div><div><strong>04</strong><span>Wear your original</span></div></section>
+
+    <section class="studio-section" id="studio">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE DESIGN STUDIO</div><h2>Dream it. <em>Design it.</em></h2></div><p>Your personal clothing workshop.<br>Every detail is up to you.</p></div>
+      <div class="studio-layout">
+        <div class="editor-panel">
+          <div class="panel-top"><div><span class="step-number">01</span><span class="panel-title">Build your piece</span></div><span class="live-pill"><span></span> LIVE PREVIEW</span></div>
+          <div class="field-group"><label for="design-name">DESIGN NAME</label><input id="design-name" type="text" maxlength="60" placeholder="e.g. The Everyday Essential" value="My signature piece"></div>
+          <div class="field-group"><div class="field-label-row"><label>CHOOSE A COLOR</label><span id="color-name">Forest green</span></div><div class="swatches" role="group" aria-label="Clothing color">
+            <button class="swatch selected" data-color="#365b48" data-name="Forest green" style="--swatch:#365b48" aria-label="Forest green"></button>
+            <button class="swatch" data-color="#e9dfcb" data-name="Oat cream" style="--swatch:#e9dfcb" aria-label="Oat cream"></button>
+            <button class="swatch" data-color="#c96f52" data-name="Terracotta" style="--swatch:#c96f52" aria-label="Terracotta"></button>
+            <button class="swatch" data-color="#242a35" data-name="Midnight" style="--swatch:#242a35" aria-label="Midnight"></button>
+            <button class="swatch" data-color="#9eabc4" data-name="Dusty blue" style="--swatch:#9eabc4" aria-label="Dusty blue"></button>
+            <button class="swatch custom-swatch" id="custom-color-button" aria-label="Choose custom color">＋</button><input type="color" id="custom-color" value="#365b48" hidden>
+          </div></div>
+          <div class="field-group"><label for="material">MATERIAL</label><div class="select-wrap"><select id="material"><option value="Organic cotton">Organic cotton</option><option value="Linen">Linen</option><option value="Denim">Denim</option><option value="Wool blend">Wool blend</option><option value="Recycled polyester">Recycled polyester</option><option value="Silk">Silk</option></select><span>⌄</span></div><p class="field-hint">Feel matters. Pick the fabric that fits your life.</p></div>
+          <div class="field-group"><label>GARMENT TYPE</label><div class="choice-grid" id="garment-options"><button class="choice selected" data-garment="T-shirt"><span>◉</span> T-shirt</button><button class="choice" data-garment="Hoodie"><span>▱</span> Hoodie</button><button class="choice" data-garment="Shirt"><span>▤</span> Shirt</button><button class="choice" data-garment="Jacket"><span>◇</span> Jacket</button><button class="choice" data-garment="Trousers"><span>⋮</span> Trousers</button><button class="choice" data-garment="Dress"><span>♧</span> Dress</button></div></div>
+          <div class="field-group"><label for="fit">FIT & SILHOUETTE</label><div class="select-wrap"><select id="fit"><option>Relaxed fit</option><option>Regular fit</option><option>Oversized</option><option>Slim fit</option><option>Tailored</option></select><span>⌄</span></div></div>
+          <div class="field-group"><label for="size">SIZE</label><div class="size-options" id="size-options"><button>S</button><button class="selected">M</button><button>L</button><button>XL</button><button>XXL</button><button>Custom</button></div></div>
+          <div class="field-group"><label for="details">SPECIAL DETAILS <span class="optional">OPTIONAL</span></label><textarea id="details" rows="3" placeholder="Embroidery, pockets, buttons, stitching..."></textarea></div>
+          <div class="field-group"><label for="inspiration">UPLOAD INSPIRATION <span class="optional">OPTIONAL</span></label><label class="upload-box" for="image-upload"><span class="upload-icon">↑</span><span><strong>Choose an image</strong><small>PNG, JPG or WEBP · Your reference image</small></span><span class="upload-action">Browse</span></label><input id="image-upload" type="file" accept="image/png,image/jpeg,image/webp" hidden><div id="upload-status" class="upload-status"></div></div>
+          <button class="button button-dark submit-design" id="send-design">Send design to makers <span>↗</span></button>
+          <p class="privacy-note">Your design is saved in this browser demo. Sign in to choose a role.</p>
+        </div>
+
+        <div class="preview-column">
+          <div class="preview-card">
+            <div class="preview-header"><div><span class="mini-label">YOUR CANVAS</span><h3 id="preview-title">My signature piece</h3></div><span class="preview-index">TC — 001</span></div>
+            <div class="garment-stage" id="garment-stage">
+              <div class="stage-label"><span>FRONT VIEW</span><span>PREVIEW 01 / 01</span></div>
+              <svg id="garment-svg" viewBox="0 0 420 440" role="img" aria-label="Illustrated garment preview">
+                <defs><filter id="cloth-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#1b2921" flood-opacity=".13"/></filter></defs>
+                <g id="garment-shape" filter="url(#cloth-shadow)">
+                  <path id="garment-body" d="M145 94 L179 77 Q210 94 241 77 L275 94 L329 143 L290 190 L263 168 L267 352 Q210 369 153 352 L157 168 L130 190 L91 143 Z" fill="#365b48" stroke="#294838" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M179 78 Q210 115 241 78" fill="none" stroke="#d5dfd5" stroke-opacity=".65" stroke-width="3"/>
+                  <path d="M158 339 Q210 351 262 339" fill="none" stroke="#d5dfd5" stroke-opacity=".45" stroke-width="1.5"/>
+                  <path d="M169 106 L169 330 M251 106 L251 330" fill="none" stroke="#d5dfd5" stroke-opacity=".16" stroke-width="1.2" stroke-dasharray="3 5"/>
+                  <text x="210" y="229" text-anchor="middle" fill="#f1f0e8" font-family="DM Sans, sans-serif" font-size="11" letter-spacing="3" opacity=".8">YOUR LABEL</text>
+                </g>
+              </svg>
+              <div class="uploaded-preview" id="uploaded-preview" hidden><img id="uploaded-image" alt="Uploaded inspiration preview"></div>
+              <div class="preview-bottom"><span>DESIGNED BY YOU</span><span>CRAFTED WITH CARE ✳</span></div>
+            </div>
+            <div class="preview-specs"><div><span class="mini-label">FABRIC</span><strong id="spec-material">Organic cotton</strong></div><div><span class="mini-label">SILHOUETTE</span><strong id="spec-fit">Relaxed fit</strong></div><div><span class="mini-label">SIZE</span><strong id="spec-size">M</strong></div></div>
+          </div>
+          <div class="maker-note"><div class="maker-icon">✳</div><div><strong>Good ideas deserve good hands.</strong><p>When you send your design, our employer dashboard can review the brief and prepare it for production.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works"><div class="eyebrow"><span class="eyebrow-line"></span> SIMPLE BY DESIGN</div><h2>From your head<br>to <em>your wardrobe.</em></h2><div class="how-grid"><article><span class="how-num">01 / CREATE</span><div class="how-icon">✳</div><h3>Make it yours</h3><p>Choose your garment, color, material, fit and finishing details.</p></article><article><span class="how-num">02 / SHARE</span><div class="how-icon">↗</div><h3>Send your brief</h3><p>Attach inspiration and pass your design to the team for review.</p></article><article><span class="how-num">03 / CRAFT</span><div class="how-icon">⌁</div><h3>Made by makers</h3><p>Your design becomes a clear production brief for the people who make it.</p></article></div></section>
+    <section class="bottom-cta"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT FAVORITE PIECE</div><h2>There’s only one <em>you.</em></h2></div><a class="button button-lime" href="#studio">Create your design <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">T</span><span>threadcraft<span class="brand-dot">.</span></span></a><span>Thoughtfully made. Uniquely yours.</span><span>© 2026 ThreadCraft Studio</span></footer>
+
+  <div class="modal-backdrop" id="login-modal" hidden>
+    <section class="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <button class="modal-close" id="close-login" aria-label="Close sign in">×</button>
+      <div class="brand modal-brand"><span class="brand-mark">T</span><span>threadcraft<span class="brand-dot">.</span></span></div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR WORKSPACE</div>
+      <h2 id="login-title">Welcome <em>back.</em></h2><p class="modal-intro">Choose your account type to enter your ThreadCraft workspace.</p>
+      <div class="role-options">
+        <button class="role-option selected" data-role="client"><span class="role-symbol">✳</span><span><strong>Client</strong><small>Design and submit your clothing ideas</small></span><span class="role-arrow">↗</span></button>
+        <button class="role-option" data-role="merchant"><span class="role-symbol">▤</span><span><strong>Merchant</strong><small>Manage products and incoming requests</small></span><span class="role-arrow">↗</span></button>
+        <button class="role-option" data-role="employer"><span class="role-symbol">⌂</span><span><strong>Employer / Maker</strong><small>Review submitted designs and production briefs</small></span><span class="role-arrow">↗</span></button>
+      </div>
+      <form id="login-form"><label for="login-email">EMAIL ADDRESS</label><input id="login-email" type="email" placeholder="you@example.com" required><label for="login-password">PASSWORD</label><input id="login-password" type="password" placeholder="At least 6 characters" minlength="6" required><button class="button button-dark login-submit" type="submit">Enter workspace <span>↗</span></button></form>
+      <p class="demo-disclaimer">Demo sign-in only — no account is created and no data is sent to a server.</p>
+    </section>
+  </div>
+
+  <div class="dashboard-overlay" id="dashboard" hidden>
+    <section class="dashboard-panel">
+      <div class="dashboard-top"><a class="brand" href="#"><span class="brand-mark">T</span><span>threadcraft<span class="brand-dot">.</span></span></a><button class="button button-outline" id="sign-out">Sign out ↗</button></div>
+      <div class="dashboard-content"><div class="eyebrow"><span class="eyebrow-line"></span> YOUR WORKSPACE</div><h2 id="dashboard-title">Client <em>studio.</em></h2><p id="dashboard-intro">Your creative space starts here.</p><div class="dashboard-stats" id="dashboard-stats"></div><div class="dashboard-list-head"><h3 id="dashboard-list-title">Your designs</h3><button class="button button-lime" id="back-to-studio">+ New design</button></div><div id="dashboard-list" class="design-list"></div><p class="demo-disclaimer">This is a front-end demo. Designs are kept in this browser only; connect a backend to support real accounts, file storage, and production workflows.</p></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
